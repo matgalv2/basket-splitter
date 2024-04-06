@@ -1,10 +1,11 @@
-#Basket splitter app
+# Basket splitter app
 
 
-##Algorithm
+## Algorithm
 
-###Optimization
+### Optimization
 
 
-##Remarks:
+
+## Remarks:
 * Throwing exceptions in constructor is highly undesirable, that's why if there is any problem with config file an empty map is returned.
