@@ -1,0 +1,9 @@
+{
+  "Haggis": ["In-store pick-up", "Next day shipping"],
+  "Longan": ["In-store pick-up", "Mailbox delivery"],
+  "Emulsifier": ["In-store pick-up", "Parcel locker"],
+  "Corn Syrup": ["Next day shipping"],
+  "Cocoa Butter": ["Mailbox delivery"],
+  "Beans": ["Parcel locker"]
+}
+
