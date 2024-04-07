@@ -19,6 +19,9 @@ Due to class of problem (NP-complete), the algorithm chosen in this implementati
 * Power set is sorted from sets with minimal number of elements - this ensures algorithm will firstly check delivery groups with the smallest number of delivery types.
 * After finding first solution, algorithm remembers number of delivery types in that solution to check only delivery groups with the same number of delivery types.
 
+## Assumptions
+* All possible items are included in configuration file.
+
 ## External libraries
 * Jackson - reading json files
 * Guava - multiset
