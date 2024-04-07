@@ -22,7 +22,7 @@ Due to class of problem (NP-complete), the algorithm chosen in this implementati
 ## External libraries
 * Jackson - reading json files
 * Guava - multiset
-## Remarks:
+## Remarks
 * Throwing exceptions in constructor is highly undesirable, that's why if there is any problem with config file an empty map is returned. 
 Personally I would change construstor's access modifier to private and create factory method, where exceptions can be thrown.
 (I believe the class signature provided in files shouldn't be changed.)
