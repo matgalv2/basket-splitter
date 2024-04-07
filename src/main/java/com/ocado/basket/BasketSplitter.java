@@ -128,7 +128,7 @@ final public class BasketSplitter {
             }
             else{
                 Set<String> itemsForCurrentDeliveryGroup = new HashSet<>();
-                currentDeliveryGroup.forEach(deliveryType -> itemsForCurrentDeliveryGroup.addAll(assignedItemsToDeliveryGroups.get(deliveryType)));
+                currentDeliveryGroup.forEach(deliveryType -> itemsForCurrentDeliveryGroup.addAll(assignedItemsToDeliveryGroups.getOrDefault(deliveryType, HashMultiset.create())));
 
                 if(Sets.difference(uniqueItems, itemsForCurrentDeliveryGroup).isEmpty() && (minNumberOfDeliveryTypes == 0 || currentDeliveryGroup.size() == minNumberOfDeliveryTypes)){
                     minNumberOfDeliveryTypes = currentDeliveryGroup.size();
@@ -155,7 +155,7 @@ final public class BasketSplitter {
 
         for (Set<String> deliveryGroup : deliveryGroups) {
             for(String deliveryType : deliveryGroup){
-                int productsForCurrentDeliveryType = assignedItemsToDeliveryGroups.get(deliveryType).size();
+                int productsForCurrentDeliveryType = assignedItemsToDeliveryGroups.getOrDefault(deliveryType, HashMultiset.create()).size();
                 if(productsForCurrentDeliveryType > mostProductsForOneDeliveryType){
                     bestDeliveryGroup = deliveryGroup;
                     mostProductsForOneDeliveryType = productsForCurrentDeliveryType;
