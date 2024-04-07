@@ -13,7 +13,7 @@ import com.google.common.collect.Multisets;
 import com.google.common.collect.Sets;
 import com.ocado.basket.error.InvalidConfigurationException;
 
-public class BasketSplitter {
+final public class BasketSplitter {
     private final Map<String, List<String>> deliveryTypesForProducts;
     private final Set<String> availableDeliveryTypes;
 
@@ -26,6 +26,15 @@ public class BasketSplitter {
                         .flatMap(List::stream)
                         .collect(Collectors.toSet());
     }
+
+    /**
+     * Splits items into possibly the lowest delivery group, which contains delivery
+     * type covering the largest number of products.
+     * @param items a list of items in basket.
+     * @return a map with assigned items to delivery types.
+     * @throws InvalidConfigurationException if there were any problems with configuration
+     * file for example: invalid json format or config file was not found.
+     */
 
     public Map<String, List<String>> split(List<String> items) throws InvalidConfigurationException {
 
