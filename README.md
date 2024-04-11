@@ -12,7 +12,7 @@ Due to class of problem (NP-complete), the algorithm chosen in this implementati
 2. Find minimal delivery groups.
 3. Find group in groups provided from previous step in which exists delivery type with the highest number of items from basket.
 4. Create map with only delivery types returned from previous step, where key is delivery type, and value is multiset with items that can be delivery with this delivery type.
-5. Assign items from basket to delivery types ensuring to create the biggest possible article group.
+5. Assign items from basket to delivery types ensuring to create the biggest possible product group.
 
 ### Optimizations
 * Power set is sorted from sets with minimal number of elements - this ensures algorithm will firstly check delivery groups with the smallest number of delivery types.
