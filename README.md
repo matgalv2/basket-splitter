@@ -8,7 +8,7 @@ The goal here is to find minimal set of subsets that which sum consists of all e
 Due to class of problem (NP-complete), the algorithm chosen in this implementation is greedy with few optimizations.
 
 ### Steps
-1. Assign items to delivery type to obtain map, where key is delivery type, and value is multiset with items that can be delivery with this delivery type.
+1. Assign items to delivery type to obtain map, where key is delivery type, and value is multiset with items that can be delivered with this delivery type.
 2. Find minimal delivery groups.
 3. Find group in groups provided from previous step in which exists delivery type with the highest number of items from basket.
 4. Create map with only delivery types returned from previous step, where key is delivery type, and value is multiset with items that can be delivery with this delivery type.
